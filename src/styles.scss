@@ -1,1 +1,18 @@
-/* You can add global styles to this file, and also import other style files */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+@font-face {
+    font-family: 'NotoSansGeorgian-ExtraBold';
+    src: url('/fonts/NotoSansGeorgian/NotoSansGeorgian-ExtraBold.ttf') format('truetype');
+}
+
+
+// Montserrat
+@font-face {
+    font-family: 'Montserrat-ExtraBold';
+    src: url('/fonts/Montserrat/Montserrat-ExtraBold.ttf') format('truetype');
+}
