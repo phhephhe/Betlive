@@ -1,0 +1,48 @@
+
+:host {
+    display: flex;
+    gap: 12px;
+}
+.card-container {
+    height:156px;
+    width: 188px;
+    margin: 0 auto;
+    background: rgba(32, 35, 49, 0.8);
+
+    
+    & .slider-image{
+        width: 100%;
+        height: 105px;
+        border-radius: 8px;
+
+
+        @media (min-width:768px) {
+            width: 376px;
+            height: 210px;
+            border-radius: 16px;
+        }
+
+    }
+
+
+    & .card-button {
+        width: 91px;
+        height: 34px;
+        border-radius: 6px;
+
+        margin: 7px auto;
+
+        display: flex;
+        align-items:center;
+        justify-content: center;
+
+        color: #FFF;
+        background: rgba(247, 6, 40, 1);
+
+        font-family: 'NotoSansGeorgian-Medium';
+        font-size: 10px;
+        font-weight: 600;
+        line-height: 13.6px;
+
+    }
+}
