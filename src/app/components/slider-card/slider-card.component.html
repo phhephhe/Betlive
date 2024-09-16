@@ -1,11 +1,31 @@
-<div class="card-container">
-    <!-- Reusable component [src] ინფუთად ჩამოვაწოდო -->
+<!-- <div class="card-container">
     <img class="slider-image" src="/images/slider-card/slider-img1.svg" alt="slider-image">
     <div class="card-button">გაიგე მეტი</div>
 </div>
 
 <div class="card-container">
-    <!-- Reusable component [src] ინფუთად ჩამოვაწოდო -->
     <img class="slider-image" src="/images/slider-card/slider-img2.svg" alt="slider-image">
     <div class="card-button">გაიგე მეტი</div>
 </div>
+ -->
+
+
+<div class="card">
+    <p-carousel
+      [value]="slides"
+      [numVisible]="2"
+      [numScroll]="1"
+      [circular]="true"
+      [showIndicators]="false"
+      [responsiveOptions]="responsiveOptions"
+    >
+      <ng-template let-product pTemplate="item">
+        <div class="card-container border-1 surface-border border-round m-2 p-3">
+            <img class="slider-image" src="/images/slider-card/slider-img1.svg" alt="slider-image1">
+            <!-- <img class="slider-image" src="/images/slider-card/slider-img2.svg" alt="slider-image2"> -->
+            <div class="card-button">გაიგე მეტი</div>
+        </div>
+      </ng-template>
+    </p-carousel>
+  </div>
+  

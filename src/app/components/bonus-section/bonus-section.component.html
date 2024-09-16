@@ -33,8 +33,8 @@
               <div class="progress-line" [ngStyle]="{'width': progressWidth + '%'}"></div>
               <div *ngFor="let point of checkpoints; let i = index"
                    class="progress-point" 
-                   [ngStyle]="{'left': point.position + '%', 'background-color': i < currentCheckpoint ? 'green' : 'blue'}">
-                <span class="money">{{ point.amount | currency }}</span>
+                   [ngStyle]="{'left': point.position + '%', 'background-color': i <= currentCheckpoint ? 'green' : 'blue'}">
+                <span class="money">{{ point.amount +"₾" }}</span>
             </div>
             </div>
           </div>
