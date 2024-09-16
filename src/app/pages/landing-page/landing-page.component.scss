@@ -8,6 +8,29 @@
       background-image: url('/images/background-web.svg');
     }
 
+    & .header {
+      display: none;
+
+      @media (min-width: 768px) {
+        width: 100%;
+        height: 50px;
+        background: rgba(32, 36, 46, 0.65);
+        display: flex;
+        align-items:center;
+        justify-content:space-around;
+
+        & .betlive-logo{
+          cursor: pointer;
+        }
+
+        & .flags{
+          display: flex;
+          gap:10px;
+          cursor: pointer;
+        }
+      }
+
+    }
 
     & .content-container {
 
@@ -18,7 +41,9 @@
             padding-bottom:17px;
 
             @media (min-width: 768px) {
-              padding-top:47px
+              padding-top:47px;
+              padding-bottom:41px;
+
             }
 
             & .headline{
@@ -33,12 +58,12 @@
               width: 349px;
               height: 78px;
               margin: 0 auto;
-              padding: 10px;
 
               display: flex;
               justify-content: center;
               align-items: center;
               flex-direction: column;
+              gap: 8px;
 
               border: 1.5px solid transparent; 
               border-image-source: linear-gradient(180deg, rgba(255, 255, 255, 0.1) -6.19%, rgba(255, 255, 255, 0.1) 44.6%);
@@ -91,10 +116,6 @@
                 font-weight: 900;
                 line-height: 17.68px;
 
-                border-top: 2px solid transparent;
-                // border: 1.5px solid transparent; 
-                // border-image-source: linear-gradient(180deg, rgba(255, 0, 0, 0.7) 0%, rgba(255, 165, 0, 0.7) 100%);
-                // border-image-slice: 1;
                 box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.75) inset;
 
 
@@ -115,10 +136,505 @@
 
               .line {
                 height:1px;
-                background:red;
+                background: rgba(255, 255, 255, 0.1);
                 width: 100%;
               }
             }
+        }
+
+
+
+        & .video-instruction-container {
+          color:#fff;
+          width: 169px;
+          height: 48px;
+          margin:0 auto;
+          background: rgba(33, 36, 53, 0.8);
+          border:1.5px solid red;
+          border-radius:10px;
+
+          display: flex;
+          gap:16px;
+          align-items:center;
+          justify-content:center;
+
+          @media (min-width: 768px) {
+            width: 250px;
+            height: 72px;
+          }
+
+
+          & .video-text {
+            font-family:"NotoSansGeorgian-Regular";
+
+            font-size: 10px;
+            font-weight: 600;
+            line-height: 13.6px;
+            text-align: left;
+
+            @media (min-width: 768px) {
+              font-size: 16px;
+              line-height: 21.76px;
+            }
+
+          }
+        }
+
+
+        & .cards-section {
+          margin-top:24px;
+
+          @media (min-width: 768px) {
+              margin:31px 0px;
+          }
+
+          & .cards-headline-container{
+            width: 320px;
+            margin: 0 auto;
+            color: #FFF;
+
+
+            @media (min-width: 768px) {
+              display: flex;
+              width: auto;
+              justify-content:center;
+              align-items: center;
+              gap:10px;
+            }
+        
+
+            & .head-line1 {
+
+              display: flex;
+              justify-content:center;
+              align-items:center;
+              gap:12px;
+
+              font-family:"NotoSansGeorgian-ExtraBold";
+              font-size: 19px;
+              font-weight: 900;
+              line-height: 32px;
+
+              @media (min-width: 1050px) {
+                font-size: 36px;
+                line-height: 48.96px;
+              }
+
+              & .green-text {
+                color:#029e02;
+
+                font-family: "Montserrat-ExtraBold";
+                font-size: 19px;
+                font-weight: 900;
+                line-height: 32px;
+                @media (min-width: 1050px) {
+                  font-size: 36px;
+                  line-height: 48.96px;
+                }
+
+              }
+
+            }
+
+
+            & .head-line2 {
+              display: flex;
+              justify-content:center;
+              align-items:center;
+              gap: 10px;
+
+              & .freespins {
+                font-family: "Montserrat-ExtraBold";
+                font-size: 24px;
+                font-weight: 900;
+                line-height: 32px;
+
+                @media (min-width: 1050px) {
+                  font-size: 36px;
+                  line-height: 48.96px;
+                }
+              }
+
+              & .jackpot {
+                font-family:"NotoSansGeorgian-ExtraBold";
+                font-size: 24px;
+                font-weight: 900;
+                line-height: 32px;
+
+                @media (min-width: 1050px) {
+                  font-size: 36px;
+                  line-height: 48.96px;
+                }
+              }
+            
+            }
+
+          }
+          
+          & .cards-flex-container {
+            margin-top:24px;
+
+
+            @media (min-width: 768px) {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              gap: 24px;
+              padding: 0 14px;
+
+            }
+
+            & .main-card-container {
+              position: relative;
+              width: 353px;
+              overflow: hidden;
+            
+              height: 299px;
+              border-radius: 16px;
+              margin: 0 auto;
+
+              background: radial-gradient(89.74% 183.88% at 6.4% 50%, rgb(2 115 65) 0%, rgba(7, 66, 20, 0.52) 100%);
+              box-shadow: 10px 4px 15px rgba(0, 0, 0); 
+
+              
+
+              @media (min-width: 768px) {
+                background: linear-gradient(to top right, rgba(156, 14, 7, 1), rgba(78, 7, 4, 0.5));
+                max-width: 484px;
+                width: 100%;
+                height: 350px;
+                margin: 0;
+              }
+
+
+              & .card-headline{
+                display: flex;
+                justify-content:space-between;
+                padding: 16px;
+                
+                & .info-text {
+                  font-family:"NotoSansGeorgian-Regular";
+                  font-size: 12px;
+                  font-weight: 600;
+                  line-height: 16.32px;
+                  color:#FFF;
+
+                  @media (min-width: 768px) {
+                    font-size: 16px;
+                    line-height: 21.76px;
+                  }
+
+                  & span {
+                    color:#029e02;
+                  }
+                }
+              }
+
+              & .card-paragraph {
+                color:#FFF;
+                font-family:"NotoSansGeorgian-Regular";
+
+                font-size: 11px;
+                font-weight: 500;
+                line-height: 14.96px;
+
+                padding: 0px 16px;
+
+                @media (min-width: 768px) {
+                  font-size: 13.2px;
+                  line-height: 17.95px;
+
+                }
+
+              }
+
+              & .curly-lines {
+
+                  position: absolute;
+
+                  width: 100px;
+                  height: 100px;
+
+                  transform: rotate(-150deg);
+                  border-radius: 24px;
+                  right: 6px; 
+                  z-index: 0;
+                  box-shadow: 1px 1px 1px rgba(19, 236, 132, 1);
+
+                  @media (min-width: 768px) {
+                    box-shadow: 1px 1px 1px rgba(157, 0, 0, 1);
+                  }
+
+                }
+                & .line1 {
+                  top: 80px;
+                  @media (min-width: 768px) {
+                     top: 170px
+                  }
+                }
+                & .line2 {
+                  top: 110px
+                }
+                & .line3 {
+                  top: 140px;
+                }
+                
+                
+              }
+
+              & .car-image {
+                position: relative;
+                margin: 39px auto 5px auto; 
+                z-index: 1;
+                content: url('/images/cars/car-M4-green.svg');
+
+                @media (min-width: 768px) {
+                  content: url('/images/cars/car-M4-red.svg');
+                  margin-bottom: 22px; 
+                }
+              }
+
+              & .coins-container{
+                display:flex;
+                align-items:center;
+                justify-content:space-between;
+                padding:0px 18px;
+
+                & .coin {
+                  width: 22px;
+                  height: 22px;
+
+                  @media (min-width: 768px) {
+                    width: 31px;
+                    height: 31px;
+                  }
+                }
+              }
+
+
+
+            }
+
+            .sub-cards-container {
+              max-width:353px;
+              width: 100%;
+              margin: 0 auto;
+
+              @media (min-width: 768px) {
+                max-width:504px;
+                margin: 0;
+                display: flex;
+                flex-direction:column;
+                gap: 30px;
+
+              }
+
+
+              & .sub-card {
+                position: relative;
+                overflow: hidden;
+                
+                width: 100%;
+                height: 210px;
+                border-radius: 16px;
+                margin: 24px 0;
+                background: linear-gradient(to left, rgb(179 147 81 / 90%), rgba(47, 35, 19, 0.9));
+                box-shadow: 10px 4px 15px rgba(0, 0, 0); 
+                
+
+                @media (min-width: 768px) {
+                  max-width: 504px;
+                  width: 100%;
+                  height: 160px;
+                  margin:0;
+                }
+             
+              
+              & .headline-text-container {
+                display: flex;
+                justify-content:space-between;
+                align-items:center;
+                padding: 11px 15px;
+
+
+                & .headline-text {
+                  font-family: "NotoSansGeorgian-Medium";
+                  font-size: 12px;
+                  font-weight: 700;
+                  line-height: 16.32px;
+
+                  color: #FFF;
+
+                    &::before {
+                      content: 'თამაშდება ყოველდღე 23:59-მდე';
+                    }
+                  
+                    @media (min-width: 768px) {
+                      &::before {
+                        content: 'გათამაშდა დღეს 23:25-ზე';
+                      }
+                    }
+                  }
+                  & .user-container {
+                    display: none;
+
+                    @media(min-width: 768px){
+                      display: flex;
+                      align-items:center;
+                      gap: 5px;
+
+                      width: 84px;
+
+                      background: rgba(0, 0, 0, 0.75);
+                      padding: 4px;
+
+                      border-radius:100px;
+                      z-index: 1;
+                    }
+
+                    
+                    & .user-image-container {
+                      position: relative;
+                      width: 20px;
+                      height: 20px;
+                      background: rgba(255, 221, 154, 1);
+                      border-radius: 50%;
+
+
+                      & .user-image {
+                        width: 9px;
+                        height: 9px;
+                        position: absolute;
+                        top: 50%;
+                        left: 54%;
+                        transform: translate(-50%, -50%);
+                      }
+
+                    }
+
+
+                    & .user-name {
+                      font-family: "Montserrat-Regular";
+                      font-size: 10px;
+                      font-weight: 600;
+                      line-height: 12.19px;
+                      color:#FFF;
+                    }
+
+
+                }
+              }
+
+               
+
+              & .amount-prize {
+                position: absolute;
+                top: 50%;
+                left:50%;
+                transform: translate(-50%,-50%);
+                z-index:1;
+
+                @media (min-width:768px) {
+                  position: static; 
+                  transform: none;
+                  padding-left:18px;
+                }
+              }
+              & .curly-lines {
+
+                position: absolute;
+                
+                width: 100px;
+                height: 100px;
+
+                transform: rotate(-150deg);
+                border-radius: 24px;
+                right: 6px; 
+                z-index: 0;
+                box-shadow: 1px 1px 1px rgba(237, 178, 19, 1);
+
+                @media (min-width: 768px) {
+                  right: 20px;
+                }
+
+                }
+                & .line1 {
+                  top: 40px
+                }
+                & .line2 {
+                  top: 70px
+                }
+                & .line3 {
+                  top: 100px;
+                }
+              
+              
+                & .gel-coins-container{
+                  width: 100%;
+                  padding: 18px;
+                  display:flex;
+                  align-items:center;
+                  justify-content:space-between;
+                  position: absolute;
+                  bottom: 0px;
+                }
+
+             }
+
+
+             & .grey-card {
+              background: linear-gradient(to left, rgb(86 96 120 / 90%), rgba(38, 41, 51, 0.9));
+
+              .grey-headline-text-container {
+                display: flex;
+                flex-direction:column;
+                align-items: start;
+
+                @media (min-width:768px){
+                  flex-direction:row;
+                }
+                
+              }
+
+              .grey-headline-text  {
+                font-family: "NotoSansGeorgian-Medium";
+                font-size: 12px;
+                font-weight: 700;
+                line-height: 16.32px;
+                color: #FFF;
+                
+              }
+                & .info-text {
+                  font-family:"NotoSansGeorgian-Regular";
+                  font-size: 12px;
+                  font-weight: 600;
+                  line-height: 16.32px;
+                  color:#FFF;
+
+                  @media (min-width: 768px) {
+                    font-size: 14px;
+                    line-height: 21.76px;
+                  }
+
+                  & span {
+                    color:#029e02;
+                  }
+                }
+               
+              & .white-line{
+                box-shadow: 1px 1px 1px rgba(228, 239, 255, 1);
+
+                @media (min-width:768px) {
+                  display: none;
+                }
+              }
+             }
+
+
+            
+
+          
+          }
         }
     }
   }
