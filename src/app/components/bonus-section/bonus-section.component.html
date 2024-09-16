@@ -1,0 +1,68 @@
+<div class="bonus-section-container">
+    <div class="bonus-headline">
+        დააგროვე ბონუს რაუნდები <span></span>
+    </div>
+
+    <div class="bonus-box">
+        <div class="navigation">
+            <ul>
+                <li>
+                    <a href=""><img class="slot" src="/images/bonus-navigation/slot.svg" alt="slot">სლოტი</a>
+                </li>
+                <li>
+                    <a href=""><img class="mini-games" src="/images/bonus-navigation/mini-games.svg" alt="slot">მინი თამაშები</a>
+                </li>
+                <li>
+                    <a href=""><img class="doubling-cube" src="/images/bonus-navigation/doubling-cube.svg" alt="slot">P2P</a>
+                </li>
+                <li>
+                    <a href=""><img class="casino" src="/images/bonus-navigation/casino.svg" alt="slot">კაზინო</a>
+                </li>
+                <li>
+                    <a href=""><img class="poker" src="/images/bonus-navigation/poker.svg" alt="slot">პოკერი</a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- <div class="progres-bar-container">
+            <div class="progres-line"></div>
+        </div> -->
+
+        <div class="progress-container">
+            <div class="progress-bar">
+              <div class="progress-line" [ngStyle]="{'width': progressWidth + '%'}"></div>
+              <div *ngFor="let point of checkpoints; let i = index"
+                   class="progress-point" 
+                   [ngStyle]="{'left': point.position + '%', 'background-color': i < currentCheckpoint ? 'green' : 'blue'}">
+                <span class="money">{{ point.amount | currency }}</span>
+            </div>
+            </div>
+          </div>
+
+
+        <div class="play-btn">ითამაშე</div>  
+          
+
+        <!-- <div class="progress-container">
+            <div class="progress-bar">
+              <div class="progress-point" style="left: 0%;">
+                <span class="money">$1,000</span>
+              </div>
+              <div class="progress-point" style="left: 25%;">
+                <span class="money">$5,000</span>
+              </div>
+              <div class="progress-point" style="left: 50%;">
+                <span class="money">$10,000</span>
+              </div>
+              <div class="progress-point" style="left: 75%;">
+                <span class="money">$20,000</span>
+              </div>
+              <div class="progress-point" style="left: 100%;">
+                <span class="money">$50,000</span>
+              </div>
+            </div>
+          </div> -->
+          
+    </div>
+    
+</div>

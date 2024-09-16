@@ -1,0 +1,218 @@
+.bonus-section-container {
+    display: flex;
+    flex-direction:column;
+    align-items:center;
+
+    gap:16px;
+
+    & .bonus-headline {
+        font-family: "NotoSansGeorgian-Medium";
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 20.4px;
+        
+        color:#FFF;
+
+        @media (min-width:768px){
+            font-size: 30px;
+            line-height: 40.8px;
+        }
+
+        & span {
+            font-weight: 800;
+
+            &::before{
+                content:'უსასრულოდ'
+            }
+
+            @media (min-width:768px){
+                color: rgba(0, 168, 60, 1);
+
+                &::before{
+                    content:'ულიმიტოდ'
+                }
+            }
+        }
+
+
+    }
+
+    & .bonus-box {
+        background: linear-gradient(182.17deg, rgba(101, 109, 149, 0.25) 2.11%, rgba(20, 23, 41, 0.25) 98.18%);
+        width: 350px;
+        height: 255px;
+        border-radius: 8px;
+        border: 1px;
+
+        @media (min-width:768px){
+            width: 765px;
+        }
+
+        & .navigation {
+
+            & ul {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+                justify-content:space-between;
+
+                & li {
+                    list-style-type: none;
+                    border: 1px solid rgba(255, 255, 255, 0.05);
+            
+
+                    & a{
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        flex-direction: column;
+                        gap: 4px;
+
+                        font-family: "NotoSansGeorgian-Light";
+                        font-size: 8px;
+                        font-weight: 600;
+                        line-height: 10.88px;
+
+                        height: 70px;
+
+                        text-decoration: none;
+
+                        color:#FFF;
+
+                        @media (min-width:768px) {
+                            height: 88px;
+                            flex-direction:row;
+                            font-size: 13px;
+
+                        }
+
+                        & .slot {
+                            width: 22px;
+
+                            @media (min-width:768px) {
+                                width: 34px;
+                            }
+                        }
+
+                        & .mini-games {
+                            width: 25px;
+
+                            @media (min-width:768px) {
+                                width: 34px;
+                            }
+                        }
+                        & .doubling-cube {
+                            width: 28px;
+
+                            @media (min-width:768px) {
+                                width: 34px;
+                            }
+                        }
+
+                        & .casino {
+                            width: 29px;
+
+                            @media (min-width:768px) {
+                                width: 34px;
+                            }
+                        }
+
+                        & .poker {
+                            width: 29px;
+
+                            @media (min-width:768px) {
+                                width: 34px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        & .play-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            background: rgba(247, 6, 40, 1);
+            color: #FFF;
+
+            width: 140px;
+            height: 52px;
+            margin: 0 auto;
+
+            border-radius:8px;
+
+            font-family: "NotoSansGeorgian-Regular";
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 21.76px;
+
+            @media (min-width:768px) {
+                border-radius: 16px;
+                width: 228px;
+                height: 80px;
+                font-size: 24px;
+            }
+        }
+
+    }
+}
+
+.progress-container {
+    position: relative;
+    width: 276px;
+    margin: 40px auto;
+  }
+  
+  .progress-bar {
+    position: relative;
+    width: 100%;
+    height: 10px;
+    background: rgba(255, 255, 255, 0.1);
+
+    border-radius: 100px;
+  }
+  
+  .progress-line {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    background-color: green;
+
+    z-index: 0;
+    transition: width 0.5s ease;
+  }
+  
+  .progress-point {
+    position: absolute;
+    bottom: 10px;
+    width: 20px;
+    height: 20px;
+    background-color: #007bff;
+    border-radius: 50%;
+    z-index: 1;
+    transform: translateX(-50%);
+  }
+  
+  .progress-point::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 10px;
+    height: 10px;
+    background-color: #fff;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .money {
+    position: absolute;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 12px;
+    color: #fff;
+  }
