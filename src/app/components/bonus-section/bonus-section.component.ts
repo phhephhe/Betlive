@@ -10,6 +10,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BonusSectionComponent implements OnInit{
 
+message: string = "გათამაშებული ყოველი 1000₾ = 1 ბონუს რაუნდს";
+
+isMessageVisible: boolean = false;
+
+toggleTooltip(): void {
+  this.isMessageVisible = !this.isMessageVisible;
+}
+
   ngOnInit(): void {
     this.updateRandomCheckpoint()
   }
@@ -30,4 +38,6 @@ export class BonusSectionComponent implements OnInit{
   updateRandomCheckpoint() {
     this.currentCheckpoint = Math.floor(Math.random() * this.checkpoints.length);
   }
+
+ 
 }

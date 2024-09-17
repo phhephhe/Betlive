@@ -24,13 +24,14 @@
             </ul>
         </div>
 
-        <!-- <div class="progres-bar-container">
-            <div class="progres-line"></div>
-        </div> -->
 
         <div class="progress-container">
             <div class="progress-bar">
               <div class="progress-line" [ngStyle]="{'width': progressWidth + '%'}"></div>
+              <img class="tooltip" (click)="toggleTooltip()" src="/images/tooltip.svg" alt="tooltip">
+              <div class="tooltip-message" *ngIf="isMessageVisible">
+                <span>{{ message }}</span>
+              </div>
               <div *ngFor="let point of checkpoints; let i = index"
                    class="progress-point" 
                    [ngStyle]="{'left': point.position + '%', 'background-color': i <= currentCheckpoint ? 'green' : 'blue'}">
@@ -39,30 +40,8 @@
             </div>
           </div>
 
-
         <div class="play-btn">ითამაშე</div>  
-          
 
-        <!-- <div class="progress-container">
-            <div class="progress-bar">
-              <div class="progress-point" style="left: 0%;">
-                <span class="money">$1,000</span>
-              </div>
-              <div class="progress-point" style="left: 25%;">
-                <span class="money">$5,000</span>
-              </div>
-              <div class="progress-point" style="left: 50%;">
-                <span class="money">$10,000</span>
-              </div>
-              <div class="progress-point" style="left: 75%;">
-                <span class="money">$20,000</span>
-              </div>
-              <div class="progress-point" style="left: 100%;">
-                <span class="money">$50,000</span>
-              </div>
-            </div>
-          </div> -->
-          
     </div>
     
 </div>
