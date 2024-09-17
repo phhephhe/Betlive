@@ -24,12 +24,10 @@ export class BonusSectionComponent implements OnInit{
   currentCheckpoint = 0;
 
   get progressWidth() {
-    console.log(this.currentCheckpoint * (100 / (this.checkpoints.length - 1)),"+")
     return this.currentCheckpoint * (100 / (this.checkpoints.length - 1));
   }
 
   updateRandomCheckpoint() {
     this.currentCheckpoint = Math.floor(Math.random() * this.checkpoints.length);
-    console.log(this.currentCheckpoint,'-=')
   }
 }

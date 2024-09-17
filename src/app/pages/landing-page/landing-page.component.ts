@@ -1,14 +1,44 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { BonusSectionComponent } from "../../components/bonus-section/bonus-section.component";
 import { SliderCardComponent } from "../../components/slider-card/slider-card.component";
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
+import { ActivatedRoute, Router } from '@angular/router';
+import { ScrollDirective } from '../../core/directives/scroll.directive';
 @Component({
   selector: 'app-landing-page',
   standalone: true,
-  imports: [BonusSectionComponent, SliderCardComponent],
+  imports: [BonusSectionComponent, SliderCardComponent, TranslateModule,ScrollDirective],
   templateUrl: './landing-page.component.html',
   styleUrl: './landing-page.component.scss'
 })
-export class LandingPageComponent {
+export class LandingPageComponent implements OnInit{
+  
+  constructor(
+    private translateService: TranslateService,
+    private route: ActivatedRoute,
+    private router: Router
+  ) {}
 
+  ngOnInit(): void {
+    this.initLanguage();
+  }
+
+  private initLanguage(): void {
+    this.route.params.subscribe(params => {
+      const lang = params['lang'] || 'ka';  
+      this.translateService.use(lang);
+    });
+  }
+
+  updateLanguage(language: string): void {
+    const state = this.route.snapshot.paramMap.get('state') || 'home';  
+
+    this.translateService.use(language);
+
+    this.router.navigate([language, state], { 
+      replaceUrl: true  
+    });
+  }
+  
 }

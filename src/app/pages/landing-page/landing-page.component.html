@@ -1,9 +1,9 @@
 <div class="bg-container">
-    <div class="header">
+    <div class="header" appScroll>
         <img class="betlive-logo" src="/images/betlive-logo.svg" alt="betlive-logo">
         <div class="flags">
-            <img src="/images/flags/ka-flag.svg" alt="ka-flag">
-            <img src="/images/flags/en-flag.svg" alt="en-flag">
+            <img src="/images/flags/ka-flag.svg" (click)="updateLanguage('ka')" alt="ka-flag">
+            <img src="/images/flags/en-flag.svg" (click)="updateLanguage('en')" alt="en-flag">
         </div>
     </div>
     <div class="content-container">
@@ -23,7 +23,7 @@
 
         <div class="video-instruction-container">
             <img class="play-icon" src="/images/play.svg" alt="play-icon">
-            <div class="video-text" >ვიდეო ინსტრუქცია</div>
+            <div class="video-text">{{"video-instruction" | translate}}</div>
         </div>
 
         <div class="cards-section">

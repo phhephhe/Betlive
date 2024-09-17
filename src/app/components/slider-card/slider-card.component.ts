@@ -9,9 +9,10 @@ import { CarouselModule } from 'primeng/carousel';
 })
 export class SliderCardComponent {
 
+
   responsiveOptions = [
     {
-      breakpoint: '768px',
+      breakpoint: '960px',
       numVisible: 1,
       numScroll: 1
     }
