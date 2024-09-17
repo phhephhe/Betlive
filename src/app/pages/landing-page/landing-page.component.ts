@@ -11,10 +11,11 @@ import { VideoPopupComponent } from '../../components/video-popup/video-popup.co
 @Component({
   selector: 'app-landing-page',
   standalone: true,
-  imports: [BonusSectionComponent, SliderCardComponent, TranslateModule,ScrollDirective ],
+  imports: [BonusSectionComponent, SliderCardComponent, TranslateModule,ScrollDirective, ],
   templateUrl: './landing-page.component.html',
   styleUrl: './landing-page.component.scss'
 })
+
 export class LandingPageComponent implements OnInit{
   constructor(
     private translateService: TranslateService,
@@ -45,9 +46,7 @@ export class LandingPageComponent implements OnInit{
   }
 
   openVideoDialog(): void {
-    const dialogref = this.dialog.open(VideoPopupComponent);
+    this.dialog.open(VideoPopupComponent);
   }
 
-
-  
 }

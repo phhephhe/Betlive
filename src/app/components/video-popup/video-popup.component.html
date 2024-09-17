@@ -1,10 +1,12 @@
-<mat-dialog-actions>
-    <span class="instruction">ინსტრუქცია</span>
-    <button mat-button mat-dialog-close><img src="/images/video/close.svg" alt="close"></button>
-</mat-dialog-actions>
-<mat-dialog-content>
-    <video controls autoplay>
-      <source src="/images/video/video.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
-</mat-dialog-content>
+<div appOutsideClick (clickOutside)="outsideClick()">
+    <mat-dialog-actions > 
+        <span class="instruction">ინსტრუქცია</span>
+        <button mat-button mat-dialog-close><img src="/images/video/close.svg" alt="close"></button>
+    </mat-dialog-actions>
+    <mat-dialog-content>
+        <video controls autoplay>
+        <source src="/images/video/video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+        </video>
+    </mat-dialog-content>
+</div>
