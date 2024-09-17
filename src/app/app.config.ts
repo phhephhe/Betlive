@@ -6,6 +6,7 @@ import { routes } from './app.routes';
 import { HttpClient, provideHttpClient } from '@angular/common/http';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 
 // ეს ფუნქცია ქმნის TranslateHttpLoader-ს, რომელიც იყენებს HttpClient-ს 
 // JSON ფაილების ჩასატვირთად './assets/i18n/' დირექტორიიდან.
@@ -35,6 +36,6 @@ export const appConfig: ApplicationConfig = {
     importProvidersFrom([
       HttpClient, 
       TranslateModule.forRoot(provideTranslation())
-    ]),
+    ]), provideAnimationsAsync(),
   ]
 };

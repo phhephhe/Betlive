@@ -11,7 +11,6 @@ export class ScrollDirective {
   @HostListener('window:scroll', [])
   onWindowScroll() {
     const scrollPosition = window.scrollY || 0; 
-    console.log(scrollPosition,'scrollposition')
     
     if (scrollPosition > 0) {
       this.renderer.addClass(this.el.nativeElement, 'scrolled');
