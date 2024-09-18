@@ -7,40 +7,26 @@
         <div class="navigation">
             <ul>
                 <li>
-                    <a href=""><img class="slot" src="/images/bonus-navigation/slot.svg" alt="slot">სლოტი</a>
+                    <a routerLink="slot" routerLinkActive="active"><img class="slot" src="/images/bonus-navigation/slot.svg" alt="slot">სლოტი</a>
                 </li>
                 <li>
-                    <a href=""><img class="mini-games" src="/images/bonus-navigation/mini-games.svg" alt="slot">მინი თამაშები</a>
+                    <a routerLink="mini-games" routerLinkActive="active"><img class="mini-games" src="/images/bonus-navigation/mini-games.svg" alt="slot">მინი თამაშები</a>
                 </li>
                 <li>
-                    <a href=""><img class="doubling-cube" src="/images/bonus-navigation/doubling-cube.svg" alt="slot">P2P</a>
+                    <a routerLink="p2p" routerLinkActive="active"><img class="doubling-cube" src="/images/bonus-navigation/doubling-cube.svg" alt="slot">P2P</a>
                 </li>
                 <li>
-                    <a href=""><img class="casino" src="/images/bonus-navigation/casino.svg" alt="slot">კაზინო</a>
+                    <a routerLink="casino" routerLinkActive="active"><img class="casino" src="/images/bonus-navigation/casino.svg" alt="slot">კაზინო</a>
                 </li>
                 <li>
-                    <a href=""><img class="poker" src="/images/bonus-navigation/poker.svg" alt="slot">პოკერი</a>
+                    <a routerLink="poker" routerLinkActive="active"><img class="poker" src="/images/bonus-navigation/poker.svg" alt="slot">პოკერი</a>
                 </li>
             </ul>
         </div>
 
+        <router-outlet></router-outlet>
 
-        <div class="progress-container">
-            <div class="progress-bar">
-              <div class="progress-line" [ngStyle]="{'width': progressWidth + '%'}"></div>
-              <img class="tooltip" (click)="toggleTooltip()" src="/images/tooltip.svg" alt="tooltip">
-              <div class="tooltip-message" *ngIf="isMessageVisible">
-                <span>{{ message }}</span>
-              </div>
-              <div *ngFor="let point of checkpoints; let i = index"
-                   class="progress-point" 
-                   [ngStyle]="{'left': point.position + '%', 'background-color': i <= currentCheckpoint ? 'green' : 'blue'}">
-                <span class="money">{{ point.amount +"₾" }}</span>
-            </div>
-            </div>
-          </div>
-
-        <div class="play-btn">ითამაშე</div>  
+        <div (click)="play()" class="play-btn">ითამაშე</div>  
 
     </div>
     

@@ -1,0 +1,14 @@
+<div class="progress-container">
+    <div class="progress-bar">
+      <div class="progress-line" [ngStyle]="{'width': progressWidth + '%'}"></div>
+      <img class="tooltip" (click)="toggleTooltip()" src="/images/tooltip.svg" alt="tooltip">
+      <div class="tooltip-message" *ngIf="isMessageVisible">
+        <span>{{ message }}</span>
+      </div>
+      <div *ngFor="let point of checkpoints; let i = index"
+           class="progress-point" 
+           [ngStyle]="{'left': point.position + '%', 'background-color': i <= currentCheckpoint ? 'green' : 'blue'}">
+        <span class="money">{{ point.amount +"₾" }}</span>
+    </div>
+    </div>
+</div>

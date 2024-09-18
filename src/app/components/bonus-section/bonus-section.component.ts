@@ -1,43 +1,22 @@
 import { CommonModule } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { ActivatedRoute, RouterModule, RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-bonus-section',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, RouterOutlet, RouterModule],
   templateUrl: './bonus-section.component.html',
   styleUrl: './bonus-section.component.scss'
 })
-export class BonusSectionComponent implements OnInit{
 
-message: string = "გათამაშებული ყოველი 1000₾ = 1 ბონუს რაუნდს";
+export class BonusSectionComponent {
 
-isMessageVisible: boolean = false;
+  constructor(private route: ActivatedRoute) { }
 
-toggleTooltip(): void {
-  this.isMessageVisible = !this.isMessageVisible;
-}
-
-  ngOnInit(): void {
-    this.updateRandomCheckpoint()
+  play() {
+    this.route.params.subscribe(params => {
+      console.log(params)
+    });
   }
-  checkpoints = [
-    { position: 0, amount: 50 },
-    { position: 25, amount: 150 },
-    { position: 50, amount: 300 },
-    { position: 75, amount: 500 },
-    { position: 100, amount: 1000 }
-  ];
-
-  currentCheckpoint = 0;
-
-  get progressWidth() {
-    return this.currentCheckpoint * (100 / (this.checkpoints.length - 1));
-  }
-
-  updateRandomCheckpoint() {
-    this.currentCheckpoint = Math.floor(Math.random() * this.checkpoints.length);
-  }
-
- 
 }
