@@ -1,0 +1,16 @@
+<div class="main-card-container">
+    <div class="card-headline">
+        <img src="/images/M4-logo.svg" alt="M4-logo">
+        <div class="info-text">დარჩენილია <span>1</span>/1</div>
+    </div>
+    <div class="card-paragraph">რაღაცა გაუთვალისწინებელი ტექსტი</div>
+    <div class="car-image" alt="M4-car"></div>
+    <div class="curly-lines line1"></div>
+    <div class="curly-lines line2"></div>
+    <div class="curly-lines line3"></div>
+
+    <div class="coins-container">
+        <img *ngFor="let coin of coins" [src]="getCoinImage(coin)" class="coin" alt="coin">
+      </div>
+      
+</div>

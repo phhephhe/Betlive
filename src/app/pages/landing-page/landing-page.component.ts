@@ -7,11 +7,13 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { ScrollDirective } from '../../core/directives/scroll.directive';
 import { MatDialog } from '@angular/material/dialog';
 import { VideoPopupComponent } from '../../components/video-popup/video-popup.component';
+import { CommonModule } from '@angular/common';
+import { PrizeCardComponent } from "../../components/prize-card/prize-card.component";
 
 @Component({
   selector: 'app-landing-page',
   standalone: true,
-  imports: [BonusSectionComponent, SliderCardComponent, TranslateModule,ScrollDirective, ],
+  imports: [BonusSectionComponent, SliderCardComponent, TranslateModule, ScrollDirective, CommonModule, PrizeCardComponent],
   templateUrl: './landing-page.component.html',
   styleUrl: './landing-page.component.scss'
 })
@@ -48,5 +50,6 @@ export class LandingPageComponent implements OnInit{
   openVideoDialog(): void {
     this.dialog.open(VideoPopupComponent);
   }
+
 
 }
