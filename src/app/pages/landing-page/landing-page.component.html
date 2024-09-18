@@ -53,18 +53,9 @@
                     <div class="curly-lines line3"></div>
 
                     <div class="coins-container">
-                        <img class="filled coin" src="/images/coins/m4-coin-filled.svg" alt="coin">
-                        <img class="filled coin" src="/images/coins/m4-coin-filled.svg" alt="coin">
-                        <img class="filled coin" src="/images/coins/m4-coin-filled.svg" alt="coin">
-                        <img class="unfilled coin" src="/images/coins/m4-coin-unfilled.svg" alt="coin">
-                        <img class="unfilled coin" src="/images/coins/m4-coin-unfilled.svg" alt="coin">
-                        <img class="unfilled coin" src="/images/coins/m4-coin-unfilled.svg" alt="coin">
-                        <img class="unfilled coin" src="/images/coins/m4-coin-unfilled.svg" alt="coin">
-                        <img class="unfilled coin" src="/images/coins/m4-coin-unfilled.svg" alt="coin">
-                        <img class="unfilled coin" src="/images/coins/m4-coin-unfilled.svg" alt="coin">
-                        <img class="unfilled coin" src="/images/coins/m4-coin-unfilled.svg" alt="coin">
-                    </div>
-
+                        <img *ngFor="let coin of coins" [src]="getCoinImage(coin)" class="coin" alt="coin">
+                      </div>
+                      
                 </div>
 
                 <div class="sub-cards-container">

@@ -7,11 +7,12 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { ScrollDirective } from '../../core/directives/scroll.directive';
 import { MatDialog } from '@angular/material/dialog';
 import { VideoPopupComponent } from '../../components/video-popup/video-popup.component';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-landing-page',
   standalone: true,
-  imports: [BonusSectionComponent, SliderCardComponent, TranslateModule,ScrollDirective, ],
+  imports: [BonusSectionComponent, SliderCardComponent, TranslateModule,ScrollDirective,CommonModule ],
   templateUrl: './landing-page.component.html',
   styleUrl: './landing-page.component.scss'
 })
@@ -26,6 +27,8 @@ export class LandingPageComponent implements OnInit{
 
   ngOnInit(): void {
     this.initLanguage();
+    this.generateRandomCoins();
+
   }
 
   private initLanguage(): void {
@@ -49,4 +52,24 @@ export class LandingPageComponent implements OnInit{
     this.dialog.open(VideoPopupComponent);
   }
 
+  coins: string[] = [];
+  totalCoins: number = 10; 
+
+  generateRandomCoins(): void {
+    const filledCoinsCount = Math.floor(Math.random() * (this.totalCoins + 1));
+
+    for (let i = 0; i < filledCoinsCount; i++) {
+      this.coins.push('filled');
+    }
+
+    for (let i = filledCoinsCount; i < this.totalCoins; i++) {
+      this.coins.push('unfilled');
+    }
+  }
+
+  getCoinImage(coinType: string): string {
+    return coinType === 'filled'
+      ? '/images/coins/m4-coin-filled.svg'
+      : '/images/coins/m4-coin-unfilled.svg';
+  }
 }
